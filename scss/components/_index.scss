@@ -1,0 +1,250 @@
+@import "../bases/listas";
+@import "../bases/mixin";
+@import "../bases/maps";
+@import "../bases/extends";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    nav{
+        .header__nav {
+            padding: 1rem 1rem;
+            height: 130px;
+                        
+        }
+    
+        .header__nav img {
+            width: 40%;
+        }
+    
+        .header__nav a {
+        font-size: nth($font-size, 4);
+        font-weight: nth($font-weight, 5);
+        }
+        
+        .header__nav li a {
+            color: nth($colores, 1) !important;
+            &:hover{
+                color: nth($colores, 2) !important;
+                font-weight: nth($font-weight, 5) !important;
+            }
+        
+        }
+    
+    }
+
+    
+}
+
+aside{
+
+    .aside__bg{
+        background: map-get($principal, bg-body);
+    }
+    .aside__ancho{
+        height: 300px;
+        border: 30px solid transparent;
+    }
+    .main__servicios h1{
+        @include format_title(#fff, 400, 1.2rem);
+        background-color: map-get($principal, bg-color);
+    }
+
+    .main__servicios small{
+        font-size: nth($font-size, 6);
+    }
+}
+
+main{
+
+    .main__buscador {
+        background: map-get($principal, bg-body);
+        padding: 0 1.5rem 2rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .main__buscador h3 {
+        color: nth($colores, 1);
+        font-weight: nth($font-weight, 6); 
+        font-size: nth($font-size, 4) ;
+        padding-bottom: 1rem;
+
+    }
+    
+    .main__button {
+        @extend %position_end;
+    }
+    
+    .main__button__input {
+        color: #fff;
+        border: 8px solid #03BECA;
+        border-radius: 15px;
+        background: #03BECA;
+        white-space: normal;
+        width: 7rem;
+        font-size: 0.8rem;
+        padding: 0 0.3rem;
+    
+    }
+    
+    input[type="submit"].btn:hover {
+        border: nth($btn-border, 2);
+        background: nth($colores, 5);;
+        color: #fff;
+    }
+
+}
+
+Footer{
+
+    
+    .footer__fondo {
+        background: nth($colores, 5);
+        padding: 0.5rem 0.5rem;
+    }
+    
+    .footer__content {
+        color: nth($colores, 6);
+        font-size: nth($font-size, 4);
+        line-height: 1.5;
+        margin: 3px 0 0 3px;
+        font-size: nth($font-size, 2);
+    }
+    
+    .footer__content h3 {
+        font-size: nth($font-size, 4);
+    }
+    
+    .footer__content li {
+        list-style-type: square;
+    }
+    
+    .footer__piePagina {
+        @extend %position_end;
+    }
+    
+    .footer__piePagina p {
+        font-size: nth($font-size, 3);
+        color: nth($colores, 6);
+    }
+    
+    .footer__redesSociales {
+        display: flex;
+        justify-content: flex-end;
+    
+    }
+    
+    .footer__redesSociales a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        color: nth($colores, 6);
+        border: nth($btn-border, 3);
+        border-radius: 50%;
+        text-align: center;
+        margin: 2px 20px 0 0;
+        transform: scale(1.5);
+        &:hover{
+            background: nth($colores, 6);
+            color: nth($colores, 5);
+            border: nth($btn-border, 3);
+            transition: all 0.5s;
+        }
+    }
+    
+    
+    .footer__redesSociales i {
+        font-size: 23px;
+        line-height: 28px;
+       
+    }
+    
+}
+
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+
+    main{
+
+        .main__buscador {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main__buscador h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .main__button {
+            display: flex;
+            align-items: center;
+        }
+
+        .main__button__input {
+            width: 7rem;
+            font-size: 0.8rem;
+            padding: 0rem 0.3rem;
+        }
+
+    }
+
+    footer{
+
+        .footer__content {
+            display: none;
+        }
+
+        .footer__piePagina p {
+            font-size: 0.6rem;
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    main{
+
+        .main__buscador {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main__buscador h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .main__button {
+            display: flex;
+            align-items: center;
+        }
+
+        .main__button__input {
+            width: 8rem;
+            font-size: 0.9rem;
+            padding: 0rem 0.5rem;
+        }
+    }
+
+    footer{
+        
+        .footer__content h3 {
+            font-size: 0.8rem;
+        }
+
+        .footer__piePagina p {
+            font-size: 0.55rem;
+        }
+    }
+
+}
