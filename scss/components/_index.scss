@@ -13,101 +13,175 @@
 }
 
 header{
-    nav{
-        .header__nav {
-            padding: 1rem 1rem;
-            height: 130px;
-                        
-        }
-    
-        .header__nav img {
-            width: 40%;
-        }
-    
-        .header__nav a {
-        font-size: nth($font-size, 4);
-        font-weight: nth($font-weight, 5);
-        }
+
+    .header__top{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: rgb(3, 190, 202);
+        height: 20px;
         
-        .header__nav li a {
-            color: nth($colores, 1) !important;
-            &:hover{
-                color: nth($colores, 2) !important;
-                font-weight: nth($font-weight, 5) !important;
+        .header__top__style{
+            color: #fff;
+            margin: 5px 10px 5px 0;
+    
+        }
+        .select{
+            background: transparent;
+            border: none;
+            margin-right: 15px;
+            color: #fff;
+            &:focus{
+                outline: none;
+                background-color:rgb(3, 190, 202);
             }
-        
         }
+        
+    }
+    nav{
+        height: 120px;
+        width: 100%;
+
+        .header__img{
+            position: absolute;
+            padding: 10px 50px;
+            img{
+                height: 100px;
+            }
+        } 
     
+        ul{
+            float: right;
+            margin: 20px 20px 0 0;
+            
+            li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+                a{
+                    color: nth($colores, 1);
+                    text-decoration: none;
+                    &:hover{
+                        color: nth($colores, 2);
+                        font-weight: nth($font-weight, 5);
+                        }
+
+                }
+            }
+            
+        }
+        .checkbtn{
+            margin-top: 0.8rem;
+            font-size: 30px;
+            color: black;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+            
+        }
+        #check{
+            display: none;
+        }
+            
     }
 
     
-}
-
-aside{
-
-    .aside__bg{
-        background: map-get($principal, bg-body);
-    }
-    .aside__ancho{
-        height: 300px;
-        border: 30px solid transparent;
-    }
-    .main__servicios h1{
-        @include format_title(#fff, 400, 1.2rem);
-        background-color: map-get($principal, bg-color);
-    }
-
-    .main__servicios small{
-        font-size: nth($font-size, 6);
-    }
 }
 
 main{
+    
+    .main__fondo{
+        background-color: map-get($principal, bg-body); 
+    }
 
-    .main__buscador {
-        background: map-get($principal, bg-body);
-        padding: 0 1.5rem 2rem 1.5rem;
-        margin-bottom: 1rem;
-    }
     
-    .main__buscador h3 {
-        color: nth($colores, 1);
-        font-weight: nth($font-weight, 6); 
-        font-size: nth($font-size, 4) ;
-        padding-bottom: 1rem;
+    
+    section{
+        .section__ancho{
+            border: 30px solid transparent;
+        }
+        .section__servicios h1{
+            @include format_title(#fff, 400, 1.2rem);
+            background-color: map-get($principal, bg-color);
+            padding: 2px 2px;
+        }
 
+        .section__servicios small{
+            font-size: nth($font-size, 6);
+        }
     }
+
+    section{
+
+        .section__buscador {
+            padding: 0 1.5rem 2rem 1.5rem;
+            
+        }
+        
+        .section__buscador h2 {
+            color: nth($colores, 1);
+            font-weight: nth($font-weight, 5); 
+            font-size: nth($font-size, 4) ;
+            margin: 2rem 0 2rem 0;
     
-    .main__button {
-        @extend %position_end;
-    }
-    
-    .main__button__input {
-        color: #fff;
-        border: 8px solid #03BECA;
-        border-radius: 15px;
-        background: #03BECA;
-        white-space: normal;
-        width: 7rem;
-        font-size: 0.8rem;
-        padding: 0 0.3rem;
-    
-    }
-    
-    input[type="submit"].btn:hover {
-        border: nth($btn-border, 2);
-        background: nth($colores, 5);;
-        color: #fff;
+        }
+        
+        .section__button {
+            @extend %positionH_end;
+        }
+        
+        .section__button__input {
+            @extend %style-btn;
+            white-space: normal;
+            width: 7rem;
+            font-size: 0.8rem;
+            padding: 0 0.3rem;
+        
+        }
+        
+        input[type="submit"].btn:hover {
+            border: nth($btn-border, 2);
+            background: nth($colores, 5);;
+            color: #fff;
+        }
     }
 
 }
 
-Footer{
+section{
 
+    .section_products{
+        margin: 40px 0 40px 0;
+        ;
+        .space__p{
+            line-height: 0.8rem;
+            font-size: 0.8rem;
+        }
+        .section_products h5{
+            font-size: 1.3rem;
+            color: nth($colores, 7);
+            margin-bottom: 1rem;
+        }
+    }
+
+    .section__titulo{
+        color: nth($colores, 7);
+        font-size: 1.5rem;
+    }
+}
+
+
+Footer{
+    background-color: map-get($principal, bg-body);
     
     .footer__fondo {
         background: nth($colores, 5);
-        padding: 0.5rem 0.5rem;
+        height: 120px;
+        padding: 5px 5px;
+
+        
     }
     
     .footer__content {
@@ -127,7 +201,7 @@ Footer{
     }
     
     .footer__piePagina {
-        @extend %position_end;
+        @extend %positionH_end;
     }
     
     .footer__piePagina p {
@@ -169,31 +243,112 @@ Footer{
 }
 
 
-@media (min-width: 576px) and (max-width: 767.99px) {
+@media (min-width: 576px) and (max-width: 767.99999px) {
+
+
+    header{
+        nav{
+            .header__img {
+                padding-left: 20px;
+                img{
+                    height: 90px;
+                }          
+            }
+
+            .checkbtn{
+                display: block;
+                
+            }
+
+            ul{
+                position: fixed;
+                width: 50%;
+                height: 100vh;
+                background: rgb(3, 190, 202);
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all 0.5s;
+                li{
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+                    a{
+                        color:#fff;
+                        text-transform: uppercase;
+                        
+                        .active{
+                            &:hover{
+                                background: none;
+                                color: nth($colores, 5 );
+                            }
+                        }
+                        
+                    }
+
+                }
+            }
+            #check{
+                &:checked ~ ul{
+                    left: 0;
+                }
+
+            }
+        
+        }
+    }
+
 
     main{
 
-        .main__buscador {
-            display: flex;
-            flex-direction: column;
-        }
+        section{
+            .section__servicios h1{
+                font-size: 1.1rem;
+            }
 
-        .main__buscador h3 {
-            font-size: 1.3rem;
-            font-weight: 500;
-        }
+            .section__servicios small{
+                font-size: 1.2rem;
+            }
 
-        .main__button {
-            display: flex;
-            align-items: center;
-        }
+            .section__carousel{
+                display: none;
+            }
 
-        .main__button__input {
-            width: 7rem;
-            font-size: 0.8rem;
-            padding: 0rem 0.3rem;
+            
+            
         }
+        section{
 
+            .section__buscador {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.5rem;
+            }
+    
+            .section__buscador h2 {
+                font-size: 1.3rem;
+                font-weight: 500;
+            }
+    
+        }
+    }
+
+    section{
+        .section_products{
+            z-index:-1;
+            .space__p{
+                font-size: 0.6rem;
+            }
+            .size_h5{
+                font-size: 0.8rem;
+            }
+            .card__none{
+                display: none;
+            }
+        }
+        
     }
 
     footer{
@@ -212,38 +367,58 @@ Footer{
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-    main{
-
-        .main__buscador {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .main__buscador h3 {
-            font-size: 1.3rem;
-            font-weight: 500;
-        }
-
-        .main__button {
-            display: flex;
-            align-items: center;
-        }
-
-        .main__button__input {
-            width: 8rem;
-            font-size: 0.9rem;
-            padding: 0rem 0.5rem;
+    header{
+        nav{
+            .header__img {
+                padding-left: 20px;          
+            }
         }
     }
 
+    main{
+        section{
+
+            .section__buscador {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .section__buscador h2 {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+    
+        }
+    }
+
+    section{
+
+        .section_products{
+           
+            .space__p{
+                line-height: 0.8rem;
+                font-size: 0.8rem;
+            }
+           
+        }
+    }
+
+
+
+
     footer{
         
+        .footer__content{
+            margin-top: 10px;
+        }
         .footer__content h3 {
             font-size: 0.8rem;
         }
 
         .footer__piePagina p {
-            font-size: 0.55rem;
+            font-size: 0.6rem;
         }
     }
 

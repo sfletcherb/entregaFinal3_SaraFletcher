@@ -1,8 +1,21 @@
-Footer .footer__piePagina, main .main__button {
+Footer .footer__piePagina, main section .section__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
+}
+
+main .main__btn, main section .section__button__input {
+  color: #fff;
+  border: 8px solid #03BECA;
+  border-radius: 15px;
+  background: #03BECA;
+}
+
+main .main__title h1 {
+  color: #5B5B5F;
+  font-size: 1.8rem;
+  padding: 10px 5px;
 }
 
 * {
@@ -14,72 +27,130 @@ Footer .footer__piePagina, main .main__button {
   font-family: "Roboto", sans-serif;
 }
 
-header nav .header__nav {
-  padding: 1rem 1rem;
-  height: 130px;
+header .header__top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgb(3, 190, 202);
+  height: 20px;
 }
-header nav .header__nav img {
-  width: 40%;
+header .header__top .header__top__style {
+  color: #fff;
+  margin: 5px 10px 5px 0;
 }
-header nav .header__nav a {
-  font-size: 1rem;
+header .header__top .select {
+  background: transparent;
+  border: none;
+  margin-right: 15px;
+  color: #fff;
+}
+header .header__top .select:focus {
+  outline: none;
+  background-color: rgb(3, 190, 202);
+}
+header nav {
+  height: 120px;
+  width: 100%;
+}
+header nav .header__img {
+  position: absolute;
+  padding: 10px 50px;
+}
+header nav .header__img img {
+  height: 100px;
+}
+header nav ul {
+  float: right;
+  margin: 20px 20px 0 0;
+}
+header nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+header nav ul li a {
+  color: rgba(91, 91, 95, 0.8);
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  color: rgba(76, 88, 160, 0.8);
   font-weight: 500;
 }
-header nav .header__nav li a {
-  color: rgba(91, 91, 95, 0.8) !important;
+header nav .checkbtn {
+  margin-top: 0.8rem;
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
-header nav .header__nav li a:hover {
-  color: rgba(76, 88, 160, 0.8) !important;
-  font-weight: 500 !important;
+header nav #check {
+  display: none;
 }
 
-aside .aside__bg {
-  background: rgb(237, 241, 249);
+main .main__fondo {
+  background-color: rgb(237, 241, 249);
 }
-aside .aside__ancho {
-  height: 300px;
+main section .section__ancho {
   border: 30px solid transparent;
 }
-aside .main__servicios h1 {
+main section .section__servicios h1 {
   color: #fff;
   font-weight: 400;
   font-size: 1.2rem;
   background-color: #03BECA;
+  padding: 2px 2px;
 }
-aside .main__servicios small {
+main section .section__servicios small {
   font-size: 1.5rem;
 }
-
-main .main__buscador {
-  background: rgb(237, 241, 249);
+main section .section__buscador {
   padding: 0 1.5rem 2rem 1.5rem;
-  margin-bottom: 1rem;
 }
-main .main__buscador h3 {
+main section .section__buscador h2 {
   color: rgba(91, 91, 95, 0.8);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
-  padding-bottom: 1rem;
+  margin: 2rem 0 2rem 0;
 }
-main .main__button__input {
-  color: #fff;
-  border: 8px solid #03BECA;
-  border-radius: 15px;
-  background: #03BECA;
+main section .section__button__input {
   white-space: normal;
   width: 7rem;
   font-size: 0.8rem;
   padding: 0 0.3rem;
 }
-main input[type=submit].btn:hover {
+main section input[type=submit].btn:hover {
   border: 8px solid #4C58A0;
-  background: #4C58A0;
+  background: rgb(76, 88, 160);
   color: #fff;
 }
 
+section .section_products {
+  margin: 40px 0 40px 0;
+}
+section .section_products .space__p {
+  line-height: 0.8rem;
+  font-size: 0.8rem;
+}
+section .section_products .section_products h5 {
+  font-size: 1.3rem;
+  color: #5B5B5F;
+  margin-bottom: 1rem;
+}
+section .section__titulo {
+  color: #5B5B5F;
+  font-size: 1.5rem;
+}
+
+Footer {
+  background-color: rgb(237, 241, 249);
+}
 Footer .footer__fondo {
-  background: #4C58A0;
-  padding: 0.5rem 0.5rem;
+  background: rgb(76, 88, 160);
+  height: 120px;
+  padding: 5px 5px;
 }
 Footer .footer__content {
   color: #fff;
@@ -115,7 +186,7 @@ Footer .footer__redesSociales a {
 }
 Footer .footer__redesSociales a:hover {
   background: #fff;
-  color: #4C58A0;
+  color: rgb(76, 88, 160);
   border: 1px solid white;
   transition: all 0.5s;
 }
@@ -124,23 +195,75 @@ Footer .footer__redesSociales i {
   line-height: 28px;
 }
 
-@media (min-width: 576px) and (max-width: 767.99px) {
-  main .main__buscador {
+@media (min-width: 576px) and (max-width: 767.99999px) {
+  header nav .header__img {
+    padding-left: 20px;
+  }
+  header nav .header__img img {
+    height: 90px;
+  }
+  header nav .checkbtn {
+    display: block;
+  }
+  header nav ul {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background: rgb(3, 190, 202);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  header nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  header nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+  }
+  header nav ul li a .active:hover {
+    background: none;
+    color: rgb(76, 88, 160);
+  }
+  header nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  main section .section__servicios h1 {
+    font-size: 1.1rem;
+  }
+  main section .section__servicios small {
+    font-size: 1.2rem;
+  }
+  main section .section__carousel {
+    display: none;
+  }
+  main section .section__buscador {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
   }
-  main .main__buscador h3 {
+  main section .section__buscador h2 {
     font-size: 1.3rem;
     font-weight: 500;
   }
-  main .main__button {
-    display: flex;
-    align-items: center;
+
+  section .section_products {
+    z-index: -1;
   }
-  main .main__button__input {
-    width: 7rem;
+  section .section_products .space__p {
+    font-size: 0.6rem;
+  }
+  section .section_products .size_h5 {
     font-size: 0.8rem;
-    padding: 0rem 0.3rem;
+  }
+  section .section_products .card__none {
+    display: none;
   }
 
   footer .footer__content {
@@ -151,36 +274,438 @@ Footer .footer__redesSociales i {
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  main .main__buscador {
-    display: flex;
-    flex-direction: column;
-  }
-  main .main__buscador h3 {
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-  main .main__button {
-    display: flex;
-    align-items: center;
-  }
-  main .main__button__input {
-    width: 8rem;
-    font-size: 0.9rem;
-    padding: 0rem 0.5rem;
+  header nav .header__img {
+    padding-left: 20px;
   }
 
+  main section .section__buscador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main section .section__buscador h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  section .section_products .space__p {
+    line-height: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  footer .footer__content {
+    margin-top: 10px;
+  }
   footer .footer__content h3 {
     font-size: 0.8rem;
   }
   footer .footer__piePagina p {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
   }
 }
-main .main__button, Footer .footer__piePagina {
+main section .section__button, Footer .footer__piePagina {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
+}
+
+main .main__btn, main section .section__button__input {
+  color: #fff;
+  border: 8px solid #03BECA;
+  border-radius: 15px;
+  background: #03BECA;
+}
+
+main .main__title h1 {
+  color: #5B5B5F;
+  font-size: 1.8rem;
+  padding: 10px 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+main .main_form h2 {
+  color: #5B5B5F;
+  font-size: 1.5rem;
+  padding: 10px 5px;
+}
+main .main__title p {
+  color: #5B5B5F;
+}
+main .linea {
+  border-top: 1px solid rgba(91, 91, 95, 0.4);
+  height: 2px;
+  width: 100%;
+  padding: 0;
+  margin: 20px auto 10px auto;
+}
+main .format__table {
+  margin: 10px 0 20px 0;
+}
+main .main__sizeFont {
+  font-size: 0.6rem;
+  padding-bottom: 5px;
+}
+main .main__btn {
+  width: 6rem;
+  font-size: 1rem;
+}
+main .main__btn:hover {
+  border: 8px solid #4C58A0;
+  background: rgb(76, 88, 160);
+  color: #fff;
+}
+
+main section .section__button, Footer .footer__piePagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+}
+
+main section .section__button__input, main .main__btn {
+  color: #fff;
+  border: 8px solid #03BECA;
+  border-radius: 15px;
+  background: #03BECA;
+}
+
+main .main__title h1 {
+  color: #5B5B5F;
+  font-size: 1.8rem;
+  padding: 10px 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+main .main__second-title h1 {
+  color: #5B5B5F;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 10px 16px;
+}
+main .main__space {
+  padding: 15px 5px;
+}
+
+main section .section__button, Footer .footer__piePagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+}
+
+main section .section__button__input, main .main__btn {
+  color: #fff;
+  border: 8px solid #03BECA;
+  border-radius: 15px;
+  background: #03BECA;
+}
+
+main .main__title h1 {
+  color: #5B5B5F;
+  font-size: 1.8rem;
+  padding: 10px 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+main .main__servicios {
+  background-color: rgb(76, 88, 160);
+  margin: 1rem 1rem 0 1rem;
+  padding: 0.5rem 0.5rem;
+  border: 2px solid rgb(238, 238, 238);
+  border-radius: 1rem;
+}
+main .main__servicios h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+main .main__servicios small {
+  color: red;
+}
+main .container__grid__servicios {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "container__grid_servicios1" "container__grid_servicios2" "container__grid_servicios3" "container__grid_servicios4" "container__grid_servicios5";
+  border: 2px solid rgb(238, 238, 238);
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  margin: 2rem 1rem 2rem 1rem;
+}
+main .container__grid__servicios1 {
+  grid-area: container__grid__servicios1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+}
+main .container__grid__servicios2 {
+  grid-area: container__grid__servicios2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+}
+main .container__grid__servicios3 {
+  grid-area: container__grid__servicios3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+}
+main .container__grid__servicios4 {
+  grid-area: container__grid__servicios4;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+}
+main .container__grid__servicios5 {
+  grid-area: container__grid__servicios5;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+}
+main .borde {
+  border: 3px solid #03BECA;
+  border-radius: 12px;
+  padding: 1rem 1rem;
+  text-align: center;
+  transition: all 1s;
+  width: 10rem;
+  height: 10rem;
+}
+main .borde:hover {
+  transform: scale(1.1);
+}
+main .borde h5 {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+  main .container__grid__servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .container__grid__servicios1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+  }
+  main .container__grid__servicios2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
+  main .container__grid__servicios3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+  }
+  main .container__grid__servicios4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+  }
+  main .container__grid__servicios5 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+  }
+  main .borde {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main .container__grid__servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  main .container__grid__servicios1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+  }
+  main .container__grid__servicios2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+  }
+  main .container__grid__servicios3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+  }
+  main .container__grid__servicios4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+  }
+  main .container__grid__servicios5 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+  }
+}
+main section .section__button, Footer .footer__piePagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+}
+
+main section .section__button__input, main .main__btn {
+  color: #fff;
+  border: 8px solid #03BECA;
+  border-radius: 15px;
+  background: #03BECA;
+}
+
+main .main__title h1 {
+  color: #5B5B5F;
+  font-size: 1.8rem;
+  padding: 10px 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+main .main__cotizacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3rem 0 3rem 0;
+  gap: 6%;
+}
+main .cotizacion__titulo h1 {
+  color: rgb(3, 190, 202);
+  font-size: 1.5rem;
+}
+main .main__cotizacion__producto img {
+  padding: 1rem 1rem 0 1rem;
+}
+main .main__cotizacion__detalle {
+  height: 100%;
+  width: 100%;
+  color: #5B5B5F;
+}
+main .main__cotizacion__detalle img {
+  width: 100%;
+  max-height: 100%;
+}
+main .table__formato {
+  color: #5B5B5F;
+}
+main .table__button {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border: 0.5rem solid rgb(3, 190, 202);
+  border-radius: 20px;
+  background: rgb(3, 190, 202);
+}
+main .table__button a:hover {
+  border: 0.5rem solid rgb(76, 88, 160);
+  background: rgb(76, 88, 160);
+}
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+  main .main__cotizacion {
+    display: flex;
+    flex-direction: column;
+  }
+  main .cotizacion__titulo h1 {
+    font-size: 1.5rem;
+  }
+  main .main__cotizacion__detalle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80%;
+    margin-bottom: 15%;
+  }
+  main .main__cotizacion__detalle {
+    height: 100%;
+    width: 100%;
+  }
+  main .main__cotizacion__detalle img {
+    width: 350%;
+    max-height: 350%;
+  }
+  main .main__cotizacion__detalle h5 p {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  main .main__cotizacion {
+    display: flex;
+    flex-direction: column;
+  }
+  main .main__cotizacion__detalle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 70%;
+    margin-bottom: 15%;
+  }
+  main .main__cotizacion__detalle {
+    height: 100%;
+    width: 100%;
+  }
+  main .main__cotizacion__detalle img {
+    width: 400%;
+    max-height: 400%;
+  }
+}
+main section .section__button, Footer .footer__piePagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+}
+
+main section .section__button__input, main .main__btn {
+  color: #fff;
+  border: 8px solid #03BECA;
+  border-radius: 15px;
+  background: #03BECA;
+}
+
+main .main__title h1 {
+  color: #5B5B5F;
+  font-size: 1.8rem;
+  padding: 10px 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

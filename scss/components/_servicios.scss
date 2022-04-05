@@ -1,0 +1,203 @@
+@import "../bases/listas";
+@import "../bases/mixin";
+@import "../bases/maps";
+@import "../bases/extends";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+main{
+    .main__servicios{
+        background-color: rgb(76,88,160);
+        margin: 1rem 1rem 0 1rem;
+        padding: 0.5rem 0.5rem;
+        border: map-get($principal, bordes);
+        border-radius: 1rem;
+    }
+    .main__servicios h2 {
+        @include format_title(#fff, 400, 1.5rem);
+
+    }
+    
+    .main__servicios small {
+        color: red;
+    }
+
+    .container__grid__servicios {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "container__grid_servicios1"
+            "container__grid_servicios2"
+            "container__grid_servicios3"
+            "container__grid_servicios4"
+            "container__grid_servicios5";
+        border: 2px solid rgb(238, 238, 238);
+        border-radius: 1rem;
+        padding: 2rem 2rem;
+        margin: 2rem 1rem 2rem 1rem;
+    }
+
+    .container__grid__servicios1 {
+        grid-area: container__grid__servicios1;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;  
+    }
+
+    .container__grid__servicios2 {
+        grid-area: container__grid__servicios2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+    
+    }
+
+    .container__grid__servicios3 {
+        grid-area: container__grid__servicios3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+    }
+    .container__grid__servicios4 {
+        grid-area: container__grid__servicios4;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+    }
+
+    .container__grid__servicios5 {
+        grid-area: container__grid__servicios5;
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+    }
+
+    .borde {
+        border: 3px solid #03BECA;
+        border-radius: 12px;
+        padding: 1rem 1rem;
+        text-align: center;
+        transition: all 1s;
+        width: 10rem;
+        height: 10rem;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    .borde h5 {
+        font-size: 1rem;
+    }
+          
+  
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+
+    main{
+    
+        .container__grid__servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        }
+
+        .container__grid__servicios1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        }
+
+        .container__grid__servicios2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        }
+
+        .container__grid__servicios3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        }
+
+        .container__grid__servicios4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        }
+
+        .container__grid__servicios5 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        }
+
+        .borde {
+        width: 100%;
+        }
+
+        
+
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+
+    main{
+
+    
+        .container__grid__servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        }
+
+        .container__grid__servicios1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        }
+
+        .container__grid__servicios2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        }
+
+        .container__grid__servicios3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        }
+
+        .container__grid__servicios4 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        }
+
+        .container__grid__servicios5 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        }
+
+         
+
+    }
+
+}

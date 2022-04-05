@@ -1,6 +1,28 @@
-%position_end{
+%positionH_end{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: end;
+}
+
+
+%positionV_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%style-btn{
+    color: #fff;
+    border: 8px solid #03BECA;
+    border-radius: 15px;
+    background: #03BECA;
+}
+
+
+%style-title{
+    color: #5B5B5F;
+    font-size: 1.8rem;
+    padding: 10px 5px;
 }

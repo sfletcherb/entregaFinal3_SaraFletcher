@@ -1,0 +1,167 @@
+@import "../bases/listas";
+@import "../bases/mixin";
+@import "../bases/maps";
+@import "../bases/extends";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+main{
+
+    .main__cotizacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 3rem 0 3rem 0;
+        gap: 6%;
+    }
+    
+    .cotizacion__titulo h1 {
+        color: nth($colores, 4 );
+        font-size: nth($font-size, 6 );
+    }
+    
+    .main__cotizacion__producto img {
+        padding: 1rem 1rem 0 1rem;
+    }
+    
+    .main__cotizacion__detalle {
+        height: 100%;
+        width: 100%;
+        color: nth($colores, 7 );
+    }
+    
+    .main__cotizacion__detalle img {
+        width: 100%;
+        max-height: 100%;
+    
+    }
+    
+    .table__formato {
+        color: nth($colores, 7 );
+    }
+    
+    .table__button {
+        color: nth($colores, 6 );
+        font-size: nth($font-size, 3 );
+        font-weight: nth($font-weight , 3 );
+        border: 0.5rem solid nth($colores, 4 );
+        border-radius: 20px;
+        background: nth($colores, 4 );
+    }
+    
+    .table__button a{
+        &:hover{
+            border: 0.5rem solid nth($colores, 5 );
+            background: nth($colores, 5 );
+        }
+        
+    }
+    
+   
+   
+}
+
+
+@media (min-width: 576px) and (max-width: 767.99px) {
+
+
+    main{
+
+        .main__cotizacion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cotizacion__titulo h1 {
+            font-size: 1.5rem;
+        }
+
+        .main__cotizacion__detalle {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 80%;
+            margin-bottom: 15%;
+        }
+
+        .main__cotizacion__detalle {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .main__cotizacion__detalle img {
+            width: 350%;
+            max-height: 350%;
+        }
+
+        .main__cotizacion__detalle h5 p {
+            font-size: 0.8rem;
+        }
+    }
+
+       
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    main{
+
+    
+
+        .main__cotizacion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main__cotizacion__detalle {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 70%;
+            margin-bottom: 15%;
+        }
+
+        .main__cotizacion__detalle {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .main__cotizacion__detalle img {
+            width: 400%;
+            max-height: 400%;
+        }
+
+    
+
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

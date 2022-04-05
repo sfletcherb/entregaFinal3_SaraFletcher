@@ -1,0 +1,60 @@
+@import "../bases/listas";
+@import "../bases/mixin";
+@import "../bases/maps";
+@import "../bases/extends";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+
+    .main__title h1{
+        @extend %style-title;
+    }
+
+    .main_form h2{
+        color: nth($colores, 7);
+        font-size: 1.5rem;
+        padding: 10px 5px;
+    }
+    
+    .main__title p{
+        color: nth($colores, 7 );
+    }
+
+
+    .linea{
+        border-top: 1px solid rgba(91, 91, 95, 0.40);
+        height: 2px;
+        width: 100%;
+        padding: 0;
+        margin: 20px auto 10px auto;
+    }
+
+    .format__table{
+        margin: 10px 0 20px 0;
+    }
+
+    .main__sizeFont{
+        font-size: 0.6rem;
+        padding-bottom: 5px
+    }
+
+    .main__btn{
+        @extend %style-btn;
+        width: 6rem;
+        font-size: 1rem;
+        &:hover {
+            border: nth($btn-border, 2);
+            background: nth($colores, 5);;
+            color: #fff;
+        }
+    }
+}
+
