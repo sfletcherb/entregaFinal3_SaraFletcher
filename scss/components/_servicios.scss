@@ -108,15 +108,14 @@ main{
 }
 
 
-
 @media (max-width: 768px) {
 
     main{
     
         .container__grid__servicios {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         }
 
         .container__grid__servicios1 {
@@ -132,9 +131,9 @@ main{
         }
 
         .container__grid__servicios3 {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
         }
 
         .container__grid__servicios4 {
@@ -144,13 +143,13 @@ main{
         }
 
         .container__grid__servicios5 {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 5;
         }
 
         .borde {
-        width: 100%;
+        width: 95%;
         }
 
         
