@@ -22,8 +22,10 @@
 
 <body>
     <header>
+
+        <!--Header Top  -->
         <div class="header__top">
-            <div class="caja">
+            <div>
                 <select class="select">
                     <option>Colombia</option>
                     <option>Bogotá D.C</option>
@@ -31,31 +33,90 @@
                     <option>Cali</option>
                 </select>
             </div>
-            <a href="https://www.whatsapp.com/?lang=es"><i class='bx bxl-whatsapp header__top__style'></i></a>
-            <p class="header__top__style">Domicilios 301 5478542</p>
+            <a href="https://api.whatsapp.com/send?phone=573002769134" target="_blank"><i
+                    class='bx bxl-whatsapp header__top__style'></i></a>
+            <p class="header__top__style ">Domicilios 300 2769434</p>
 
         </div>
 
-        <nav class="header__nav">
 
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class='bx bx-menu'></i>
-            </label>
-            <a class="header__img" href="#">
-                <img src="../img/logo.png" alt="Red de droguerias independientes">
-            </a>
-            <ul>
-                <li><a class="active" href="../index.html">Inicio</a></li>
-                <li><a href="./cotizacion.html">Cotización</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="./tiendas.html">Tiendas</a></li>
-                <li><a href="./ordenes.html">Ordenes</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid justify-content-between">
 
+                <!--Header Left  -->
+
+                <div class="d-flex">
+
+                    <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="../index.html">
+                        <img src="../img/logo.png" height="100" alt="RedFarma" loading="lazy" style="margin-top: 2px;" />
+                    </a>
+
+
+                    <form class="input-group w-auto my-auto d-sm-flex">
+                        <input autocomplete="off" type="search" class="form-control rounded navbar-input"
+                            placeholder="Busca tu producto" style="min-width: 50px;" />
+                        <span class="input-group-text border-0 d-lg-flex  nav__icon nav-item"><i
+                                class='bx bx-search-alt-2'></i></span>
+                    </form>
+                </div>
+
+
+                <!--Header center-->
+
+                <div class="d-flex nav__menu-main">
+
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class='bx bx-menu menu-icon'></i>
+                    </label>
+
+                    <ul class="navbar-nav flex-row d-sm-flex nav__menu">
+                        <li class="nav-item me-3 me-lg-1 ">
+                            <a href="./cotizacion.html">Cotización</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="./servicios.html">Servicios</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="./tiendas.html">Tiendas</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a class="active" href="./ordenes.html">Ordenes</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+                <!--Header right-->
+                <ul class="navbar-nav flex-row d-sm-flex align-items-center">
+                    <li class="nav-item me-3 me-lg-1 ">
+
+                        <a class="text-reset me-3 " href="#">
+                            <i class='bx bxs-cart-add nav__icon1'></i>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item me-3 me-lg-1 ">
+                        <a class="text-reset me-3 " href="#">
+                            <i class='bx bxs-user-circle nav__icon1'></i>
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+            </div>
         </nav>
-
-
     </header>
 
 

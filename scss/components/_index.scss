@@ -13,7 +13,7 @@
 }
 
 header{
-
+    
     .header__top{
         display: flex;
         justify-content: flex-end;
@@ -33,61 +33,55 @@ header{
             color: #fff;
             &:focus{
                 outline: none;
-                background-color:rgb(3, 190, 202);
+                background-color: rgb(3, 190, 202);
+                color: rgb(76,88,160);
             }
         }
         
     }
-    nav{
-        height: 120px;
-        width: 100%;
+    nav{   
 
-        .header__img{
-            position: absolute;
-            padding: 10px 50px;
-            img{
-                height: 100px;
+        .nav__menu{
+            .active{
+                color:map-get($principal, color-hover);
             }
+        }
+        .nav__menu a{
+            text-decoration: none;
+            font-weight: 700;
+            margin-right: 16px;
+            color:map-get($principal, color-menu);
+            &:hover{
+                color:map-get($principal, color-hover);
+            }
+        }       
+
+        .menu-icon, #check{
+            display: none;
+        }
+
+        
+        .nav__icon{
+            font-size: 1.3rem;
+            color: rgb(76,88,160);
         } 
-    
-        ul{
-            float: right;
-            margin: 20px 20px 0 0;
-            
-            li{
-                display: inline-block;
-                line-height: 80px;
-                margin: 0 5px;
-                a{
-                    color: nth($colores, 1);
-                    text-decoration: none;
-                    &:hover{
-                        color: nth($colores, 2);
-                        font-weight: nth($font-weight, 5);
-                        }
 
-                }
+        .nav__icon1{
+            font-size: 1.8rem;
+            color: rgb(76,88,160);
+        } 
+        
+
+        .nav-item i{ 
+            overflow: hidden;
+            &:hover{
+                -webkit-transform: scale(1.3);
+                transform: scale(1.3);
+                color: map-get($principal, bg-color);
             }
-            
         }
-        .checkbtn{
-            margin-top: 0.8rem;
-            font-size: 30px;
-            color: black;
-            float: right;
-            line-height: 80px;
-            margin-right: 40px;
-            cursor: pointer;
-            display: none;
-            
-        }
-        #check{
-            display: none;
-        }
-            
+        
     }
-
-    
 }
 
 main{
@@ -96,7 +90,7 @@ main{
         background-color: map-get($principal, bg-body); 
     }
 
-    
+    /*Carousel Section */
     
     section{
         .section__ancho{
@@ -111,44 +105,121 @@ main{
         .section__servicios small{
             font-size: nth($font-size, 6);
         }
+
+        .control-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 20px;
+            background-color: nth($colores, 4 );
+        }
+
+        .carousel-item{
+            &:hover{
+                filter: saturate(130%);
+            }
+        }
     }
 
+    /*Search section*/
     section{
-
+        
         .section__buscador {
-            padding: 0 1.5rem 2rem 1.5rem;
-            
+            height: 15rem;
         }
         
         .section__buscador h2 {
             color: nth($colores, 1);
             font-weight: nth($font-weight, 5); 
-            font-size: nth($font-size, 4) ;
-            margin: 2rem 0 2rem 0;
+            font-size: nth($font-size, 4);
+            margin-top: 3rem;
+            letter-spacing: 0.10em;
+            
+        }
+
+        .nav__icon{
+            font-size: 1.5rem;
+        }
+
+        .nav__icon1{
+            font-size: 1.5rem;
+            color: rgb(76,88,160);
+            &:hover i{
+                -webkit-transform: scale(1.3);
+                transform: scale(1.3);
+                color: map-get($principal, bg-color);
+            }
+        }
+
+        .section__buscador1{
+            @extend %positionV_center;
     
         }
         
         .section__button {
-            @extend %positionH_end;
+            @extend %positionV_center;
         }
         
-        .section__button__input {
-            @extend %style-btn;
-            white-space: normal;
-            width: 7rem;
-            font-size: 0.8rem;
-            padding: 0 0.3rem;
+        .section__button a{
+            text-decoration: none;
+            color: inherit;
         
         }
-        
-        input[type="submit"].btn:hover {
-            border: nth($btn-border, 2);
-            background: nth($colores, 5);;
-            color: #fff;
-        }
-    }
+
+        .btn__search {
+            position: relative;
+            margin: auto;
+            padding: 19px 22px;
+            transition: all 0.2s ease;
+            color: nth($colores, 1);
+            }
+          .btn__search:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            border-radius: 28px;
+            background: rgba(3, 190, 202, 0.5);
+            width: 56px;
+            height: 56px;
+            transition: all 0.3s ease;
+          }
+          .btn__search span {
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 18px;
+            font-weight: 900;
+            letter-spacing: 0.10em;
+            vertical-align: middle;
+            color: nth($colores, 1);
+          }
+          .btn__search svg {
+            position: relative;
+            top: 0;
+            margin-left: 10px;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke: nth($colores, 1);
+            stroke-width: 2;
+            transform: translateX(-5px);
+            transition: all 0.3s ease;
+          }
+          .btn__search:hover:before {
+            width: 100%;
+            background: map-get($principal, bg-color);
+            
+          }
+          .btn__search:hover svg {
+            transform: translateX(0);
+          }
+          .btn__search:active {
+            transform: scale(0.96);
+        }    }
 
 }
+
+/*Products section*/
 
 section{
 
@@ -167,9 +238,140 @@ section{
     }
 
     .section__titulo{
-        color: nth($colores, 7);
+        color: nth($colores, 1);
         font-size: 1.5rem;
+        margin: 1rem 0 0 1rem;
     }
+
+    /* Category Ads */
+
+    #ads {
+        margin: 30px 0 30px 0;
+        
+    
+    }
+
+    #ads .card__sale {
+        position: absolute;
+        left: -10px;
+        top: -20px;
+        background: #F9DB84;
+        text-align: center;
+        border-radius: 30px 30px 30px 30px; 
+        color: map-get($principal, color-menu);
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    #ads .card__discount {
+        position: absolute;
+        right: -10px;
+        top: -20px;
+        background: #FF7330;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;      
+        font-size: 14px;      
+        width: 50px;
+        height: 50px;    
+        padding: 15px 0 0 0;
+    }
+
+
+    #ads .card-detail-sale {      
+        background: #F9DB84;
+        text-align: center;
+        border-radius: 30px 30px 30px 30px;
+        color: map-get($principal, color-menu);
+        padding: 5px 10px;
+        font-size: 14px;        
+    }
+
+    #ads .card{
+        &:hover {
+            border-radius: 4px;
+            box-shadow: 12px 15px 20px 0px rgba(76, 88, 160, 0.80);
+            transition: all 0.3s ease;
+        }
+    }
+
+
+    #ads .card-image-overlay {
+        font-size: 20px;
+            
+    }
+
+
+    #ads .card-image-overlay span {
+        display: inline-block;              
+    }
+
+    
+   .card__more{
+    background: linear-gradient(170deg, rgba(160,76,130,0.40) 0%, #4C58A0 90%);
+    }
+                
+    .card__a{
+        color: #FF7330;
+    }      
+  
+    .column {
+        margin-top: 3rem;
+            padding-left: 3rem;
+    }
+  
+  
+    .card {
+        min-height: 250px;
+        margin: 0;
+        padding: 1.7rem 1.2rem;
+        border: none;
+        border-radius: 0;
+        color: nth($colores, 1 );
+        letter-spacing: 0.05rem;
+        box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+    }
+    .card .txt {
+        margin-left: -3rem;
+        z-index: 1;
+        color: #4C58A0;
+    }
+    .card .txt h1 {
+        font-size: 1.4rem;
+        font-weight: 300;
+    }
+ 
+    .card a {
+        z-index: 3;
+        font-size: 0.7rem;
+        color: #F9DB84;
+        margin-left: 1rem;
+        position: relative;
+        bottom: -0.5rem;
+        text-transform: uppercase;
+    }
+  
+    .card .ico-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .card i {
+        position: relative;
+        right: -50%;
+        top: 60%;
+        font-size: 10rem;
+        line-height: 0;
+        opacity: 0.2;
+        color: white;
+        z-index: 0;
+    }
+
 }
 
 
@@ -243,113 +445,77 @@ Footer{
 }
 
 
-@media (min-width: 576px) and (max-width: 767.99999px) {
+@media (max-width: 576px){
 
 
     header{
-        nav{
-            .header__img {
-                padding-left: 20px;
-                img{
-                    height: 90px;
-                }          
-            }
-
-            .checkbtn{
-                display: block;
-                
-            }
-
-            ul{
-                position: fixed;
-                width: 50%;
-                height: 100vh;
-                background: rgb(3, 190, 202);
-                top: 80px;
-                left: -100%;
-                text-align: center;
-                transition: all 0.5s;
-                li{
-                    display: block;
-                    margin: 50px 0;
-                    line-height: 30px;
-                    a{
-                        color:#fff;
-                        text-transform: uppercase;
-                        
-                        .active{
-                            &:hover{
-                                background: none;
-                                color: nth($colores, 5 );
-                            }
-                        }
-                        
-                    }
-
-                }
-            }
-            #check{
-                &:checked ~ ul{
-                    left: 0;
-                }
-
-            }
-        
+        .header__top{
+            font-size: 0.8rem;
         }
     }
 
+    nav{
+        .checkbtn{
+            display: block;
+            .menu-icon{
+                display: block;
+                position:fixed;
+                top: 30px;
+                left: 20px;
+                color: #4C58A0;
+                cursor: pointer;
+                font-size: 25px;
+                font-weight: 500;
+                
+            }
+        } 
+        .nav__menu-main ul{
+            display: block;
+            position: fixed;
+            top: 70px;
+            left: -100%;
+            background: #03BECA;
+            border-radius: 20px;
+            opacity: 95%;
+            border: 2%;
+            width: 70%;
+            height: 100vh;
+            right: 0;
+            z-index: 3;
+            li{
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                &:last-child{
+                   background: none;
+                   padding: 1rem; 
+                }
+            }
+        }
+
+        #check:checked ~ ul{
+            left: 0;
+        }
+
+        .nav__menu a{
+            color: #fff;
+        }
+
+    }
 
     main{
 
-        section{
-            .section__servicios h1{
-                font-size: 1.1rem;
-            }
-
-            .section__servicios small{
-                font-size: 1.2rem;
-            }
-
-            .section__carousel{
-                display: none;
-            }
-
-            
-            
+        .carousel{
+            display: none;
         }
-        section{
-
-            .section__buscador {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 1.5rem;
-            }
-    
-            .section__buscador h2 {
-                font-size: 1.3rem;
-                font-weight: 500;
-            }
-    
+        .main__fondo{
+            height: 550px;
         }
     }
 
-    section{
-        .section_products{
-            z-index:-1;
-            .space__p{
-                font-size: 0.6rem;
-            }
-            .size_h5{
-                font-size: 0.8rem;
-            }
-            .card__none{
-                display: none;
-            }
-        }
-        
-    }
+     
+    
 
     footer{
 
@@ -358,55 +524,36 @@ Footer{
         }
 
         .footer__piePagina p {
-            font-size: 0.6rem;
+            display: none;
         }
 
     }
 
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media  (min-width: 577px) and (max-width: 767.99px) {
 
-    header{
-        nav{
-            .header__img {
-                padding-left: 20px;          
-            }
-        }
-    }
-
+    
     main{
-        section{
+        .section__buscador{
+            display: block;
+            flex-direction: column;
+        }
+        .main__fondo{
+            height: 780px;
+        }
 
-            .section__buscador {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-    
-            .section__buscador h2 {
-                font-size: 1.2rem;
-                font-weight: 500;
-            }
-    
+        .section__button{
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
     section{
-
-        .section_products{
-           
-            .space__p{
-                line-height: 0.8rem;
-                font-size: 0.8rem;
-            }
-           
+        .card-none{
+            display: none;
         }
     }
-
-
-
 
     footer{
         
@@ -421,5 +568,19 @@ Footer{
             font-size: 0.6rem;
         }
     }
+
+}
+
+
+@media  (min-width: 768px) and (max-width: 992px) {
+
+nav{
+    .nav__menu a{
+        margin-right: 2px;
+    }
+    
+}
+
+
 
 }

@@ -13,6 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,8 +24,10 @@
 <body>
 
     <header>
+
+        <!--Header Top  -->
         <div class="header__top">
-            <div class="caja">
+            <div>
                 <select class="select">
                     <option>Colombia</option>
                     <option>Bogotá D.C</option>
@@ -32,96 +35,181 @@
                     <option>Cali</option>
                 </select>
             </div>
-            <a href="https://www.whatsapp.com/?lang=es"><i class='bx bxl-whatsapp header__top__style'></i></a>
-            <p class="header__top__style">Domicilios 301 5478542</p>
+            <a href="https://api.whatsapp.com/send?phone=573002769134" target="_blank"><i
+                    class='bx bxl-whatsapp header__top__style'></i></a>
+            <p class="header__top__style ">Domicilios 300 2769434</p>
 
         </div>
 
-        <nav class="header__nav">
 
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class='bx bx-menu'></i>
-            </label>
-            <a class="header__img" href="#">
-                <img src="./img/logo.png" alt="Red de droguerias independientes">
-            </a>
-            <ul>
-                <li><a class="active" href="index.html">Inicio</a></li>
-                <li><a href="./pages/cotizacion.html">Cotización</a></li>
-                <li><a href="./pages/servicios.html">Servicios</a></li>
-                <li><a href="./pages/tiendas.html">Tiendas</a></li>
-                <li><a href="./pages/ordenes.html">Ordenes</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid justify-content-between">
 
+                <!--Header Left  -->
+
+                <div class="d-flex">
+
+                    <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="./index.html">
+                        <img src="./img/logo.png" height="100" alt="RedFarma" loading="lazy" style="margin-top: 2px;" />
+                    </a>
+
+
+                    <form class="input-group w-auto my-auto d-sm-flex">
+                        <input autocomplete="off" type="search" class="form-control rounded navbar-input"
+                            placeholder="Busca tu producto" style="min-width: 50px;" />
+                        <span class="input-group-text border-0 d-none d-lg-flex  nav__icon nav-item"><i
+                                class='bx bx-search-alt-2 '></i></span>
+                    </form>
+                </div>
+
+
+                <!--Header center-->
+
+                <div class="d-flex nav__menu-main">
+
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class='bx bx-menu menu-icon'></i>
+                    </label>
+
+                    <ul class="navbar-nav flex-row d-sm-flex nav__menu">
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="./pages/cotizacion.html">Cotización</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="./pages/servicios.html">Servicios</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="./pages/tiendas.html">Tiendas</a>
+                        </li>
+
+                        <li class="nav-item me-3 me-lg-1">
+                            <a href="./pages/ordenes.html">Ordenes</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+
+                <!--Header right-->
+                <ul class="navbar-nav flex-row d-sm-flex align-items-center">
+                    <li class="nav-item me-3 me-lg-1 ">
+
+                        <a class="text-reset me-3 " href="#">
+                            <i class='bx bxs-cart-add nav__icon1'></i>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item me-3 me-lg-1 ">
+                        <a class="text-reset me-3 " href="#">
+                            <i class='bx bxs-user-circle nav__icon1'></i>
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+
+
+            </div>
         </nav>
-
-
     </header>
 
     <main>
 
         <div class="main__fondo">
+
+            <!-- Carousel Section  -->
             <section>
 
-                <div id="carouselExampleControls" class="carousel slide section__ancho section__carousel"
-                    data-bs-ride="carousel">
-                    <div class="carousel-inner section__carousel">
-                        <div class="carousel-item active">
-                            <a href="#"><img src="./img/publicidad1.png" class="d-block w-100" alt="benet"></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#"><img src="./img/publicidad2.png" class="d-block w-100" alt="ofertas"></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#"><img src="./img/publicidad3.png" class="d-block w-100" alt="calmidol"></a>
-                        </div>
-                        <div class="carousel-item">
-                            <a href="#"><img src="./img/publicidad4.png" class="d-block w-100" alt="...pedialyte"></a>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+                <section>
 
-                <div class="section__servicios text-center">
-                    <h1> Encuentra los <small class="text-warning"><strong>mejores precios</strong></small> de toda la
-                        oferta disponible en droguerias.</h1>
-                </div>
+                    <div id="carouselExampleControls" class="carousel slide carousel-fade section__ancho"
+                        data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active section__carousel">
+                                <a href="#"><img src="./img/publicidad1.png" class="d-block w-100" alt="benet"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="./img/publicidad2.png" class="d-block w-100" alt="ofertas"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="./img/publicidad3.png" class="d-block w-100" alt="calmidol"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="./img/publicidad4.png" class="d-block w-100"
+                                        alt="...pedialyte"></a>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon control-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon control-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="section__servicios text-center">
+                        <h1> Encuentra los <small class="text-warning"><strong>mejores precios</strong></small> de toda
+                            la oferta disponible en droguerias.</h1>
+                    </div>
+
+                </section>
 
             </section>
 
-
-            <section class="container-fluid">
+            <!-- Search Section -->
+            <section class="container-fluid section__buscador-main">
 
                 <div class="row g-4 section__buscador">
-                    <div class="col-sm">
-                        <h2>¿Qué medicamento buscas?</h3>
-                            <input type="text" class="form-control" aria-label="Username">
+                    <div class="col-sm section__buscador1">
+                        <h2>¿Qué medicamento buscas?</h2>
+                        <form class="input-group w-auto my-auto d-sm-flex d-md-flex">
+                            <input autocomplete="off" type="search" class="form-control rounded" placeholder=""
+                                style="min-width: 100px" ; />
+                            <span class="input-group-text border-0 d-sm-flex d-md-flex nav__icon1 nav-item"><i
+                                    class='bx bx-search-alt-2'></i></span>
+                        </form>
                     </div>
-                    <div class="col-sm">
-                        <h2>¿De qué laboratorio?</h3>
-                            <select class="form-select" aria-label="Zip">
-                                <option selected></option>
-                                <option value="1">Genfar (Precios desde $19.690)</option>
-                                <option value="2">MK (Precios desde $24.000)</option>
-                                <option value="3">Laprof (Precios desde $30.000)</option>
-                            </select>
+
+                    <div class="col-sm section__buscador1">
+                        <h2>¿De qué laboratorio?</h2>
+                        <form class="input-group w-auto my-auto d-sm-flex d-md-flex">
+                            <input autocomplete="off" type="search" class="form-control rounded" placeholder=""
+                                style="min-width: 100px" ; />
+                            <span class="input-group-text border-0 d-sm-flex d-md-flex nav__icon1 nav-item"><i
+                                    class='bx bx-chevron-down'></i></span>
+                        </form>
+
+
                     </div>
-                    <div class="col-sm">
-                        <h2>¿Donde quieres recibirlos?</h3>
-                            <input type="text" class="form-control" aria-label="Zip">
+                    <div class="col-sm section__buscador1">
+                        <h2>¿Donde quieres recibirlos?</h2>
+                        <form class="input-group w-auto my-auto d-sm-flex d-md-flex">
+                            <input autocomplete="off" type="search" class="form-control rounded" placeholder=""
+                                style="min-width: 100px" ; />
+                            <span class="input-group-text border-0  d-sm-flex d-md-flex nav__icon1 nav-item"><i
+                                    class='bx bx-map'></i></span>
+                        </form>
                     </div>
-                    <div class="col-sm-2 section__button">
-                        <input class="btn section__button__input" type="submit" value="Buscar Medicamentos">
+                    <div class="col-sm-2 col-md-2 section__button">
+                        <a href="./pages/cotizacion.html" class="btn__search">
+                            <span>Buscar</span>
+                            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                                <path d="M1,5 L11,5"></path>
+                                <polyline points="8 1 12 5 8 9"></polyline>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
@@ -130,151 +218,111 @@
         </div>
 
     </main>
-   
 
+    
+    <!-- Products Section -->
 
+    <section class="container-fluid section-main">
 
-    <section class="container-fluid section_products">
+        <h2 class="section__titulo">Súper Descuentos</h2>
 
-        <h2 class="section__titulo">Súper Descuentos <small class="text-danger text-decoration-underline">Ver
-                más</small></h2>
+        <div class="carousel slide section_products">
 
-        <div id="carouselExampleControlsNoTouching" class="carousel slide section_products" data-bs-touch="false"
-            data-bs-interval="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="row row-cols-1 row-cols-md-5 g-4 row-cols-sm-4 g-4">
-                        <div class="col ">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto1.png" class="card-img-top " alt="calmidol">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Calmidol max</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $67.550.</p>
-                                    <p class="card-text space__p">Ahora: $54.040</p>
+                    <div class="row row-cols-1 row-cols-md-5 g-4 row-cols-sm-4 g-4" id="ads">
+                        <div class="col">
+                            <div class="card h-100 card rounded">
+                                <div>
+                                    <span class="card__sale">Sale</span>
+                                    <span class="card__discount">25%</span>
+                                    <img class="img-fluid img1" src="./img/producto1.png" alt="Bioderma" />
+                                </div>
+                                <div class="card-image-overlay m-auto">
+                                    <span
+                                        class="card-detail-sale text-decoration-line-through text-danger">$118.850</span>
+                                    <span class="card-detail-sale">$89.138</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="ad-title m-auto">
+                                        <h5>Hydrabio Serum</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto3.png" class="card-img-top" alt="crema vaginal">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Intibon</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $26.100.</p>
-                                    <p class="card-text space__p">Ahora: $20.880</p>
+                            <div class=" card h-100 card rounded">
+                                <div>
+                                    <span class="card__sale">Sale</span>
+                                    <span class="card__discount">25%</span>
+                                    <img class="img-fluid img1" src="./img/producto2.png" alt="Eucerin" />
+                                </div>
+                                <div class="card-image-overlay m-auto">
+                                    <span
+                                        class="card-detail-sale text-decoration-line-through text-danger">$104.600</span>
+                                    <span class="card-detail-sale">$78.450</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="ad-title m-auto">
+                                        <h5>Eucerin Sun Gel</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto4.png" class="card-img-top" alt="gel antiedad">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Sorel Plus</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $31.800.</p>
-                                    <p class="card-text space__p">Ahora: $28.350</p>
+                            <div class="card h-100 card rounded">
+                                <div>
+                                    <span class="card__sale">Sale</span>
+                                    <span class="card__discount">23%</span>
+                                    <img class="img-fluid img1" src="./img/producto3.png" alt="Elvive" />
+                                </div>
+                                <div class="card-image-overlay m-auto">
+                                    <span
+                                        class="card-detail-sale text-decoration-line-through text-danger">$19.300</span>
+                                    <span class="card-detail-sale">$14.900</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="ad-title m-auto">
+                                        <h5>L'oreal Elvive</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col card__none">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto5.png" class="card-img-top" alt="bucoxol">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Bucoxol</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $14.150.</p>
-                                    <p class="card-text space__p">Ahora: $12.020</p>
+                        <div class="col card-none">
+                            <div class="card h-100 card rounded">
+                                <div>
+                                    <span class="card__sale">Sale</span>
+                                    <span class="card__discount">25%</span>
+                                    <img class="img-fluid img1" src="./img/producto4.png" alt="Cetaphil" />
+                                </div>
+                                <div class="card-image-overlay m-auto">
+                                    <span
+                                        class="card-detail-sale text-decoration-line-through text-danger">$108.500</span>
+                                    <span class="card-detail-sale">$81.375</span>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="ad-title m-auto">
+                                        <h5>Emulsión Cetaphil</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto6.png" class="card-img-top" alt="Locion Sorel">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Loción Sorel</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $29.800.</p>
-                                    <p class="card-text space__p">Ahora: $31.800</p>
+                        <div class="rounded ">
+                            <div class=" column">
+                                <div class=" card h-100 card card__more">
+                                    <div class="txt">
+                                        <h1>Encuentra aquí </br>más productos y servicios</h1>
+                                    </div>
+                                    <a href="./pages/servicios.html" class="card__a">Ver más</a>
+                                    <div class="ico-card">
+                                        <i class="fa fa-medkit" aria-hidden="true"></i>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
 
+
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row row-cols-1 row-cols-md-5 row-cols-sm-5 g-4 ">
-                        <div class="col ">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto3.png" class="card-img-top" alt="crema vaginal">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Intibon</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $20.800.</p>
-                                    <p class="card-text space__p">Ahora: $20.880</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto5.png" class="card-img-top" alt="bucoxol">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Bucoxol</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $14.150.</p>
-                                    <p class="card-text space__p">Ahora: $12.020</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto1.png" class="card-img-top " alt="calmidol">
-                                <div class="card-body card__none">
-                                    <h5 class="card-title size_h5">Calmidol max</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $67.550.</p>
-                                    <p class="card-text space__p">Ahora: $54.040</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto4.png" class="card-img-top" alt="gel antiedad">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Sorel Plus</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $25.400.</p>
-                                    <p class="card-text space__p">Ahora: $28.350</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card h-100 shadow p-1 mb-5 bg-body rounded">
-                                <img src="./img/producto6.png" class="card-img-top" alt="Locion Sorel">
-                                <div class="card-body">
-                                    <h5 class="card-title size_h5">Loción Sorel</h5>
-                                    <p class="card-text text-decoration-line-through text-danger space__p ">Antes:
-                                        $29.800.</p>
-                                    <p class="card-text space__p">Ahora: $31.800</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <button class="carousel-control-prev section__btn" type="button"
-                    data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon section__btn" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon section__btn" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
 
     </section>
 
@@ -294,18 +342,19 @@
             </div>
 
             <div class="col-sm footer__piePagina">
-                <p>RedFarma.co 2022. Todos los derechos reservados.</p>
+                <p>2022 © RedFarma.co Todos los derechos reservados.</p>
             </div>
 
             <ul class="col-sm footer__redesSociales">
-                <a href="https://www.whatsapp.com/?lang=es"><i class='bx bxl-whatsapp'></i></a>
-                <a href="https://es-la.facebook.com/"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/?hl=es-la"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.whatsapp.com/?lang=es" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://es-la.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/redfarma.co/" target="_blank"><i class='bx bxl-instagram'></i></a>
             </ul>
 
         </div>
 
     </footer>
+
 
 
 
@@ -315,6 +364,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/8990046a48.js"></script>
 
 
 </body>

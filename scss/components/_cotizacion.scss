@@ -26,6 +26,7 @@ main{
     .cotizacion__titulo h1 {
         color: nth($colores, 4 );
         font-size: nth($font-size, 6 );
+        padding: 10px 0 1px 0;
     }
     
     .main__cotizacion__producto img {
@@ -55,18 +56,51 @@ main{
         border: 0.5rem solid nth($colores, 4 );
         border-radius: 20px;
         background: nth($colores, 4 );
-    }
-    
-    .table__button a{
-        &:hover{
-            border: 0.5rem solid nth($colores, 5 );
-            background: nth($colores, 5 );
-        }
         
     }
-    
+
+     
    
-   
+}
+
+
+@media (max-width: 575.99px){
+
+    main{
+
+        .main__cotizacion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cotizacion__titulo h1 {
+            font-size: 1.3rem;
+        }
+
+        .main__cotizacion__detalle {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20%;
+            margin-bottom: 15%;
+        }
+
+        .main__cotizacion__detalle {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .main__cotizacion__detalle img {
+            width: 150%;
+            max-height: 150%;
+        }
+
+        .main__cotizacion__detalle h5 p {
+            font-size: 0.8rem;
+        }
+    }
 }
 
 
@@ -105,7 +139,7 @@ main{
         }
 
         .main__cotizacion__detalle h5 p {
-            font-size: 0.8rem;
+            font-size: 1rem;
         }
     }
 

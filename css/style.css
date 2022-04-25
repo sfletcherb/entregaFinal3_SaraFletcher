@@ -1,11 +1,18 @@
-Footer .footer__piePagina, main section .section__button {
+Footer .footer__piePagina {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
 }
 
-main .main__btn, main section .section__button__input {
+main section .section__button, main section .section__buscador1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main__btn {
   color: #fff;
   border: 8px solid #03BECA;
   border-radius: 15px;
@@ -47,49 +54,44 @@ header .header__top .select {
 header .header__top .select:focus {
   outline: none;
   background-color: rgb(3, 190, 202);
+  color: rgb(76, 88, 160);
 }
-header nav {
-  height: 120px;
-  width: 100%;
+header nav .nav__menu .active {
+  color: rgb(76, 88, 160);
 }
-header nav .header__img {
-  position: absolute;
-  padding: 10px 50px;
-}
-header nav .header__img img {
-  height: 100px;
-}
-header nav ul {
-  float: right;
-  margin: 20px 20px 0 0;
-}
-header nav ul li {
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
-}
-header nav ul li a {
-  color: rgba(91, 91, 95, 0.8);
+header nav .nav__menu a {
   text-decoration: none;
+  font-weight: 700;
+  margin-right: 16px;
+  color: rgba(91, 91, 95, 0.8);
 }
-header nav ul li a:hover {
-  color: rgba(76, 88, 160, 0.8);
-  font-weight: 500;
+header nav .nav__menu a:hover {
+  color: rgb(76, 88, 160);
 }
-header nav .checkbtn {
-  margin-top: 0.8rem;
-  font-size: 30px;
-  color: black;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
+header nav .menu-icon, header nav #check {
   display: none;
 }
-header nav #check {
-  display: none;
+header nav .nav__icon {
+  font-size: 1.3rem;
+  color: rgb(76, 88, 160);
+}
+header nav .nav__icon1 {
+  font-size: 1.8rem;
+  color: rgb(76, 88, 160);
+}
+header nav .nav-item i {
+  overflow: hidden;
+}
+header nav .nav-item i:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  color: #03BECA;
 }
 
+main {
+  /*Carousel Section */
+  /*Search section*/
+}
 main .main__fondo {
   background-color: rgb(237, 241, 249);
 }
@@ -106,27 +108,96 @@ main section .section__servicios h1 {
 main section .section__servicios small {
   font-size: 1.5rem;
 }
+main section .control-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 20px;
+  background-color: rgb(3, 190, 202);
+}
+main section .carousel-item:hover {
+  filter: saturate(130%);
+}
 main section .section__buscador {
-  padding: 0 1.5rem 2rem 1.5rem;
+  height: 15rem;
 }
 main section .section__buscador h2 {
   color: rgba(91, 91, 95, 0.8);
   font-weight: 500;
   font-size: 1rem;
-  margin: 2rem 0 2rem 0;
+  margin-top: 3rem;
+  letter-spacing: 0.1em;
 }
-main section .section__button__input {
-  white-space: normal;
-  width: 7rem;
-  font-size: 0.8rem;
-  padding: 0 0.3rem;
+main section .nav__icon {
+  font-size: 1.5rem;
 }
-main section input[type=submit].btn:hover {
-  border: 8px solid #4C58A0;
-  background: rgb(76, 88, 160);
-  color: #fff;
+main section .nav__icon1 {
+  font-size: 1.5rem;
+  color: rgb(76, 88, 160);
+}
+main section .nav__icon1:hover i {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  color: #03BECA;
+}
+main section .section__button a {
+  text-decoration: none;
+  color: inherit;
+}
+main section .btn__search {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+  color: rgba(91, 91, 95, 0.8);
+}
+main section .btn__search:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(3, 190, 202, 0.5);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+main section .btn__search span {
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  vertical-align: middle;
+  color: rgba(91, 91, 95, 0.8);
+}
+main section .btn__search svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: rgba(91, 91, 95, 0.8);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+main section .btn__search:hover:before {
+  width: 100%;
+  background: #03BECA;
+}
+main section .btn__search:hover svg {
+  transform: translateX(0);
+}
+main section .btn__search:active {
+  transform: scale(0.96);
 }
 
+/*Products section*/
+section {
+  /* Category Ads */
+}
 section .section_products {
   margin: 40px 0 40px 0;
 }
@@ -140,8 +211,113 @@ section .section_products .section_products h5 {
   margin-bottom: 1rem;
 }
 section .section__titulo {
-  color: #5B5B5F;
+  color: rgba(91, 91, 95, 0.8);
   font-size: 1.5rem;
+  margin: 1rem 0 0 1rem;
+}
+section #ads {
+  margin: 30px 0 30px 0;
+}
+section #ads .card__sale {
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  background: #F9DB84;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  color: rgba(91, 91, 95, 0.8);
+  padding: 5px 10px;
+  font-size: 14px;
+}
+section #ads .card__discount {
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  background: #FF7330;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  width: 50px;
+  height: 50px;
+  padding: 15px 0 0 0;
+}
+section #ads .card-detail-sale {
+  background: #F9DB84;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  color: rgba(91, 91, 95, 0.8);
+  padding: 5px 10px;
+  font-size: 14px;
+}
+section #ads .card:hover {
+  border-radius: 4px;
+  box-shadow: 12px 15px 20px 0px rgba(76, 88, 160, 0.8);
+  transition: all 0.3s ease;
+}
+section #ads .card-image-overlay {
+  font-size: 20px;
+}
+section #ads .card-image-overlay span {
+  display: inline-block;
+}
+section .card__more {
+  background: linear-gradient(170deg, rgba(160, 76, 130, 0.4) 0%, #4C58A0 90%);
+}
+section .card__a {
+  color: #FF7330;
+}
+section .column {
+  margin-top: 3rem;
+  padding-left: 3rem;
+}
+section .card {
+  min-height: 250px;
+  margin: 0;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color: rgba(91, 91, 95, 0.8);
+  letter-spacing: 0.05rem;
+  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+}
+section .card .txt {
+  margin-left: -3rem;
+  z-index: 1;
+  color: #4C58A0;
+}
+section .card .txt h1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+section .card a {
+  z-index: 3;
+  font-size: 0.7rem;
+  color: #F9DB84;
+  margin-left: 1rem;
+  position: relative;
+  bottom: -0.5rem;
+  text-transform: uppercase;
+}
+section .card .ico-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+section .card i {
+  position: relative;
+  right: -50%;
+  top: 60%;
+  font-size: 10rem;
+  line-height: 0;
+  opacity: 0.2;
+  color: white;
+  z-index: 0;
 }
 
 Footer {
@@ -195,103 +371,84 @@ Footer .footer__redesSociales i {
   line-height: 28px;
 }
 
-@media (min-width: 576px) and (max-width: 767.99999px) {
-  header nav .header__img {
-    padding-left: 20px;
-  }
-  header nav .header__img img {
-    height: 90px;
-  }
-  header nav .checkbtn {
-    display: block;
-  }
-  header nav ul {
-    position: fixed;
-    width: 50%;
-    height: 100vh;
-    background: rgb(3, 190, 202);
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-  }
-  header nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  header nav ul li a {
-    color: #fff;
-    text-transform: uppercase;
-  }
-  header nav ul li a .active:hover {
-    background: none;
-    color: rgb(76, 88, 160);
-  }
-  header nav #check:checked ~ ul {
-    left: 0;
-  }
-
-  main section .section__servicios h1 {
-    font-size: 1.1rem;
-  }
-  main section .section__servicios small {
-    font-size: 1.2rem;
-  }
-  main section .section__carousel {
-    display: none;
-  }
-  main section .section__buscador {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
-  }
-  main section .section__buscador h2 {
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-
-  section .section_products {
-    z-index: -1;
-  }
-  section .section_products .space__p {
-    font-size: 0.6rem;
-  }
-  section .section_products .size_h5 {
+@media (max-width: 576px) {
+  header .header__top {
     font-size: 0.8rem;
   }
-  section .section_products .card__none {
+
+  nav .checkbtn {
+    display: block;
+  }
+  nav .checkbtn .menu-icon {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    color: #4C58A0;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  nav .nav__menu-main ul {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: #03BECA;
+    border-radius: 20px;
+    opacity: 95%;
+    border: 2%;
+    width: 70%;
+    height: 100vh;
+    right: 0;
+    z-index: 3;
+  }
+  nav .nav__menu-main ul li {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  nav .nav__menu-main ul li:last-child {
+    background: none;
+    padding: 1rem;
+  }
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+  nav .nav__menu a {
+    color: #fff;
+  }
+
+  main .carousel {
     display: none;
+  }
+  main .main__fondo {
+    height: 550px;
   }
 
   footer .footer__content {
     display: none;
   }
   footer .footer__piePagina p {
-    font-size: 0.6rem;
+    display: none;
   }
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
-  header nav .header__img {
-    padding-left: 20px;
-  }
-
-  main section .section__buscador {
-    display: flex;
+@media (min-width: 577px) and (max-width: 767.99px) {
+  main .section__buscador {
+    display: block;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
-  main section .section__buscador h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
+  main .main__fondo {
+    height: 780px;
+  }
+  main .section__button {
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  section .section_products .space__p {
-    line-height: 0.8rem;
-    font-size: 0.8rem;
+  section .card-none {
+    display: none;
   }
 
   footer .footer__content {
@@ -304,14 +461,26 @@ Footer .footer__redesSociales i {
     font-size: 0.6rem;
   }
 }
-main section .section__button, Footer .footer__piePagina {
+@media (min-width: 768px) and (max-width: 992px) {
+  nav .nav__menu a {
+    margin-right: 2px;
+  }
+}
+Footer .footer__piePagina {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
 }
 
-main .main__btn, main section .section__button__input {
+main section .section__buscador1, main section .section__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main__btn {
   color: #fff;
   border: 8px solid #03BECA;
   border-radius: 15px;
@@ -365,14 +534,21 @@ main .main__btn:hover {
   color: #fff;
 }
 
-main section .section__button, Footer .footer__piePagina {
+Footer .footer__piePagina {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
 }
 
-main section .section__button__input, main .main__btn {
+main section .section__buscador1, main section .section__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main__btn {
   color: #fff;
   border: 8px solid #03BECA;
   border-radius: 15px;
@@ -394,24 +570,107 @@ main .main__title h1 {
   font-family: "Roboto", sans-serif;
 }
 
-main .main__second-title h1 {
-  color: #5B5B5F;
-  font-weight: 400;
-  font-size: 1rem;
-  margin: 10px 16px;
+main .bg__caja {
+  position: relative;
+  background: linear-gradient(90deg, white, rgb(3, 190, 202));
 }
-main .main__space {
-  padding: 15px 5px;
+main .bg__caja img {
+  max-width: 100%;
+  max-height: 100%;
+  clip-path: polygon(0 0, 53% 0, 41% 100%, 0% 100%);
+  filter: opacity(90%);
+}
+main .bg__caja .bg__caja1 {
+  position: absolute;
+  top: 15%;
+  margin-left: 50%;
+}
+main .bg__caja .bg__caja1 h1 {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  filter: opacity(30%);
+}
+main .bg__caja .bg__caja1 h2 {
+  position: absolute;
+  color: #fff;
+}
+main .bg__caja .bg__caja2 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: 40%;
+  margin-left: 40%;
+  width: 50%;
+}
+main .bg__caja li {
+  width: 15%;
+}
+main .bg__caja .bg__caja-icon i {
+  font-size: 1.5rem;
+  color: rgb(76, 88, 160);
+}
+main .bg__caja .bg__caja-icon i:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  color: #03BECA;
 }
 
-main section .section__button, Footer .footer__piePagina {
+section .bg__map-title {
+  color: #5B5B5F;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+section .map-responsive {
+  overflow: hidden;
+  padding-bottom: 500px;
+  position: relative;
+  height: 0;
+}
+section .map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding: 0 5px 40px 5px;
+}
+
+@media (max-width: 576px) {
+  main .bg__caja2 ul {
+    width: 50px;
+  }
+  main .bg__caja p {
+    display: none;
+  }
+  main .bg__caja h6 {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 577px) and (max-width: 767.99px) {
+  main .bg__caja2 ul {
+    width: 50px;
+  }
+  main .bg__caja h6, main p {
+    font-size: 0.6rem;
+  }
+}
+Footer .footer__piePagina {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
 }
 
-main section .section__button__input, main .main__btn {
+main section .section__buscador1, main section .section__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main__btn {
   color: #fff;
   border: 8px solid #03BECA;
   border-radius: 15px;
@@ -431,6 +690,10 @@ main .main__title h1 {
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+nav .nav__menu .active {
+  color: rgb(76, 88, 160);
 }
 
 main .main__servicios {
@@ -504,10 +767,10 @@ main .borde h5 {
   font-size: 1rem;
 }
 
-@media (min-width: 576px) and (max-width: 767.99px) {
+@media (max-width: 768px) {
   main .container__grid__servicios {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
   main .container__grid__servicios1 {
@@ -571,14 +834,21 @@ main .borde h5 {
     grid-row-start: 3;
   }
 }
-main section .section__button, Footer .footer__piePagina {
+Footer .footer__piePagina {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
 }
 
-main section .section__button__input, main .main__btn {
+main section .section__buscador1, main section .section__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main__btn {
   color: #fff;
   border: 8px solid #03BECA;
   border-radius: 15px;
@@ -610,6 +880,7 @@ main .main__cotizacion {
 main .cotizacion__titulo h1 {
   color: rgb(3, 190, 202);
   font-size: 1.5rem;
+  padding: 10px 0 1px 0;
 }
 main .main__cotizacion__producto img {
   padding: 1rem 1rem 0 1rem;
@@ -634,11 +905,35 @@ main .table__button {
   border-radius: 20px;
   background: rgb(3, 190, 202);
 }
-main .table__button a:hover {
-  border: 0.5rem solid rgb(76, 88, 160);
-  background: rgb(76, 88, 160);
-}
 
+@media (max-width: 575.99px) {
+  main .main__cotizacion {
+    display: flex;
+    flex-direction: column;
+  }
+  main .cotizacion__titulo h1 {
+    font-size: 1.3rem;
+  }
+  main .main__cotizacion__detalle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    margin-bottom: 15%;
+  }
+  main .main__cotizacion__detalle {
+    height: 100%;
+    width: 100%;
+  }
+  main .main__cotizacion__detalle img {
+    width: 150%;
+    max-height: 150%;
+  }
+  main .main__cotizacion__detalle h5 p {
+    font-size: 0.8rem;
+  }
+}
 @media (min-width: 576px) and (max-width: 767.99px) {
   main .main__cotizacion {
     display: flex;
@@ -664,7 +959,7 @@ main .table__button a:hover {
     max-height: 350%;
   }
   main .main__cotizacion__detalle h5 p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -688,14 +983,21 @@ main .table__button a:hover {
     max-height: 400%;
   }
 }
-main section .section__button, Footer .footer__piePagina {
+Footer .footer__piePagina {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
 }
 
-main section .section__button__input, main .main__btn {
+main section .section__buscador1, main section .section__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main__btn {
   color: #fff;
   border: 8px solid #03BECA;
   border-radius: 15px;
