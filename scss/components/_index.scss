@@ -171,8 +171,9 @@ main{
             padding: 19px 22px;
             transition: all 0.2s ease;
             color: nth($colores, 1);
-            }
-          .btn__search:before {
+        }
+    
+        .btn__search:before {
             content: "";
             position: absolute;
             top: 0;
@@ -183,8 +184,8 @@ main{
             width: 56px;
             height: 56px;
             transition: all 0.3s ease;
-          }
-          .btn__search span {
+        }
+        .btn__search span {
             position: relative;
             font-size: 0.95rem;
             line-height: 18px;
@@ -192,8 +193,8 @@ main{
             letter-spacing: 0.10em;
             vertical-align: middle;
             color: nth($colores, 1);
-          }
-          .btn__search svg {
+        }
+        .btn__search svg {
             position: relative;
             top: 0;
             margin-left: 10px;
@@ -204,19 +205,19 @@ main{
             stroke-width: 2;
             transform: translateX(-5px);
             transition: all 0.3s ease;
-          }
-          .btn__search:hover:before {
+        }
+        .btn__search:hover:before {
             width: 100%;
             background: map-get($principal, bg-color);
             
-          }
-          .btn__search:hover svg {
+        }
+        .btn__search:hover svg {
             transform: translateX(0);
-          }
-          .btn__search:active {
+        }
+        .btn__search:active {
             transform: scale(0.96);
-        }    }
-
+        }        
+    }
 }
 
 /*Products section*/
@@ -574,13 +575,11 @@ Footer{
 
 @media  (min-width: 768px) and (max-width: 992px) {
 
-nav{
-    .nav__menu a{
-        margin-right: 2px;
+    nav{
+        .nav__menu a{
+            margin-right: 2px;
+        }
+        
     }
-    
-}
-
-
 
 }
